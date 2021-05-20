@@ -1,10 +1,26 @@
 
 body{
-    background-color: white
+    background-color: #dddddd;
+    rgba(0, 0, 0, 1);
+}
+div#interface {
+    width: 900px;
+    background-color: white;
+    margin: -20px, auto, 0px, auto;
+    box-shadow: rgba(0, 0, 0, 1);
+    padding: 10px;
 }
 p{
     text-align: justify; 
     text-indent: 50px;
+}
+header#cabecalho img#icone {
+    position: absolute;
+    left: 700px;
+    top: 40px;
+}
+header#cabecalho {
+    
 }
 
 /*Formatação de Imagens com Legendas*/
