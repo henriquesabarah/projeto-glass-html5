@@ -61,7 +61,7 @@
             </article>
         </section>
 
-        <form action="">
+        <form method="POST" id="fcontato" action="mailto:henriquesabarah@gmail.com">
           
             <fieldset id="usuario">
                 <legend>Identificação do Usuário</legend>
@@ -79,20 +79,35 @@
                 <legend> Endereço do Usuário</legend>
                     <p> <label for="clog">Logradouro:</label> <input type="text" name="tlog" id="clog" size="20" maxlength="30" placeholder="Rua, Avenida, Travessa ..."> </p> 
                     <p> <label for="cnum">Número:</label> <input type="number" name="tnum" id="cnum" min="0" max="99999"> </p>
-                    <p> <label for="cestado">Estado:</label> <input type="text" name="testado" id="cestado" size="30" maxlength="30"> </p>
+                    <p> <label for="cestado">Estado:</label> 
+                        <select name="nestado" id="cestado">
+                            <optgroup label="Região Suldeste">
+                                <option value="RJ">Rio De Janeiro</option>
+                                <option value="SP">São Paulo</option>
+                                <option value="MG">Minas Gerais</option>
+                                <option value="ES">Espírito Santo</option>
+                            </optgroup>
+                            <optgroup label="Região Sul">
+                                <option value="PR">Paraná</option>
+                                <option value="SP">Santa Catarina</option>
+                                <option value="MG">Rio Grande do Sul</option>
+                            </optgroup>
+                                
+                        </select>
+                    </p>
                     <p> <label for="ccidade">Cidade:</label> <input type="text" name="tcidade" id="ccidade" size="30" maxlength="30"> </p>
             </fieldset>
             <fieldset id="mensagem">
                 <legend> Mensagem do Usuário</legend>
-                    Grau de Urgência:
-                    Mensagem:
+                    <p> <label for="curg">Grau de Urgência: Min<input type="range" name="nurg" id="curg" min="0" max="10" step="5">Max</label></p> 
+                    <p> <label for="cmen">Mensagem:</label> <textarea name="nmen" id="cmen" cols="30" rows="10" placeholder="Deixe aqui a sua mensagem"></textarea></p> 
             </fieldset>
             <fieldset id="pedido">
                 <legend>Quero um Google Glass</legend>
-                    Gostaria de adquirir um Google Glass quando disponível
-                    Cor:
-                    Quantidade:
-                    Preço Total: R$
+                    <p> <label for="cped">Gostaria de adquirir um Google Glass quando disponível</label></p>  
+                    <p> <label for="ccor"></label>Cor:</p> 
+                    <p> <label for="cquant">Quantidade:</label></p>
+                    <p> <label for="cpreco">Preço Total: R$</label></p>
             </fieldset>
 
             [BOTÃO ENVIAR]
